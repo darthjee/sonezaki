@@ -1,5 +1,6 @@
 Stalchild
-====
+=========
+
 [![Code Climate](https://codeclimate.com/github/darthjee/sonezaki/badges/gpa.svg)](https://codeclimate.com/github/darthjee/sonezaki)
 [![Test Coverage](https://codeclimate.com/github/darthjee/sonezaki/badges/coverage.svg)](https://codeclimate.com/github/darthjee/sonezaki/coverage)
 [![Issue Count](https://codeclimate.com/github/darthjee/sonezaki/badges/issue_count.svg)](https://codeclimate.com/github/darthjee/sonezaki)
@@ -8,6 +9,12 @@ Stalchild
 [![Inline docs](http://inch-ci.org/github/darthjee/sonezaki.svg?branch=master)](http://inch-ci.org/github/darthjee/sonezaki)
 
 ![sonezaki](https://raw.githubusercontent.com/darthjee/sonezaki/master/sonezaki.jpg)
+
+Gem used for storing and accessing data during debugging sessions
+
+Current Release: [0.0.1](https://github.com/darthjee/sonezaki/tree/0.0.1)
+
+[Next release](https://github.com/darthjee/sonezaki/compare/0.0.1...master)
 
 Yard Documentation
 -------------------
