@@ -6,7 +6,7 @@ require 'sonezaki/version'
 
 Gem::Specification.new do |gem|
   gem.name                  = 'sonezaki'
-  gem.version               = Stalchild::VERSION
+  gem.version               = Sonezaki::VERSION
   gem.authors               = ['DarthJee']
   gem.email                 = ['darthjee@gmail.com']
   gem.homepage              = 'https://github.com/darthjee/sonezaki'

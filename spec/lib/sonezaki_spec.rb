@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Stalchild do
+describe Sonezaki do
   it 'does something' do
   end
 end

@@ -2,6 +2,6 @@
 
 # @api public
 # @author darthjee
-class Stalchild
+class Sonezaki
   autoload :VERSION, 'sonezaki/version'
 end

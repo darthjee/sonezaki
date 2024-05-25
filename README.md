@@ -1,4 +1,4 @@
-Stalchild
+Sonezaki
 =========
 
 [![Code Climate](https://codeclimate.com/github/darthjee/sonezaki/badges/gpa.svg)](https://codeclimate.com/github/darthjee/sonezaki)
@@ -29,7 +29,7 @@ Installation
   gem install sonezaki
 ```
 
-- Or add Stalchild to your `Gemfile` and `bundle install`:
+- Or add Sonezaki to your `Gemfile` and `bundle install`:
 
 ```ruby
   gem 'sonezaki'
