@@ -8,7 +8,7 @@ end
 
 SimpleCov.start 'gem'
 
-require 'stalchild'
+require 'sonezaki'
 require 'pry-nav'
 
 support_files = File.expand_path('spec/support/**/*.rb')

@@ -20,7 +20,7 @@ jobs:
     docker:
       - image: darthjee/circleci_ruby_270:1.3.0
         environment:
-          PROJECT: stalchild
+          PROJECT: sonezaki
     steps:
       - checkout
       - run:
@@ -54,7 +54,7 @@ jobs:
     docker:
       - image: darthjee/circleci_ruby_270:1.3.0
         environment:
-          PROJECT: stalchild
+          PROJECT: sonezaki
     steps:
       - checkout
       - run:

@@ -2,14 +2,14 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stalchild/version'
+require 'sonezaki/version'
 
 Gem::Specification.new do |gem|
-  gem.name                  = 'stalchild'
+  gem.name                  = 'sonezaki'
   gem.version               = Stalchild::VERSION
   gem.authors               = ['DarthJee']
   gem.email                 = ['darthjee@gmail.com']
-  gem.homepage              = 'https://github.com/darthjee/stalchild'
+  gem.homepage              = 'https://github.com/darthjee/sonezaki'
   gem.description           = ''
   gem.summary               = gem.description
   gem.required_ruby_version = '>= 2.7.0'

@@ -3,5 +3,5 @@
 # @api public
 # @author darthjee
 class Stalchild
-  autoload :VERSION, 'stalchild/version'
+  autoload :VERSION, 'sonezaki/version'
 end
