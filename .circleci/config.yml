@@ -21,6 +21,9 @@ jobs:
       - image: darthjee/circleci_ruby_270:1.3.0
         environment:
           PROJECT: sonezaki
+          REDIS_URL: redis://redis:6379/0
+      - image: circleci/redis:latest
+          name: redis
     steps:
       - checkout
       - run:
