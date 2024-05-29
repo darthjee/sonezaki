@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Sonezaki
   class RedisAccessor
     attr_reader :key, :type, :ttl
