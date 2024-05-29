@@ -35,7 +35,13 @@ module Sonezaki
     end
 
     def connection
-      @connection ||= Redis.new
+      @connection ||= build_connection
+    end
+
+    def build_connection
+      require 'redis'
+
+      Redis.new
     end
   end
 end
