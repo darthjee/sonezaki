@@ -25,13 +25,13 @@ describe Sonezaki::RedisAccessor do
     end
 
     context "when a value has been set" do
-      let(:value) { Random.rand(1000) }
+      let(:value) { Random.rand(100000) / 10.0 }
 
       before do
         Redis.new.set(key, value)
       end
 
-      context "when type option is not given"do
+      context "when type option is not given" do
         it "returns the string for the value" do
           expect(accessor.get).to eq(value.to_s)
         end
@@ -40,7 +40,15 @@ describe Sonezaki::RedisAccessor do
       context "when type option is integer" do
         let(:options) { { type: :integer } }
 
-        it "returns the string for the value" do
+        it "returns the integer for the value" do
+          expect(accessor.get).to eq(value.to_i)
+        end
+      end
+
+      context "when type option is float" do
+        let(:options) { { type: :float } }
+
+        it "returns the float for the value" do
           expect(accessor.get).to eq(value)
         end
       end

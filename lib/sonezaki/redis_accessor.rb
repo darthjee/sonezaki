@@ -28,7 +28,7 @@ module Sonezaki
       case type
       when :integer
         return value.to_i
-      when :integer
+      when :float
         return value.to_f
       end
       value
