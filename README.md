@@ -8,7 +8,7 @@ Sonezaki
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9836de08612e46b889c7978be2b72a14)](https://www.codacy.com/manual/darthjee/sonezaki?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=darthjee/sonezaki&amp;utm_campaign=Badge_Grade)
 [![Inline docs](http://inch-ci.org/github/darthjee/sonezaki.svg?branch=master)](http://inch-ci.org/github/darthjee/sonezaki)
 
-![sonezaki](https://raw.githubusercontent.com/darthjee/sonezaki/master/sonezaki.jpg)
+![sonezaki](https://raw.githubusercontent.com/darthjee/sonezaki/master/sonezaki.png)
 
 Gem used for storing and accessing data during debugging sessions
 

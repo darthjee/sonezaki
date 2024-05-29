@@ -2,6 +2,7 @@
 
 # @api public
 # @author darthjee
-class Sonezaki
+module Sonezaki
   autoload :VERSION, 'sonezaki/version'
+  autoload :RedisAccessor, 'sonezaki/redis_accessor'
 end
