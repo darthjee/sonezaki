@@ -23,7 +23,7 @@ jobs:
           PROJECT: sonezaki
           REDIS_URL: redis://redis:6379/0
       - image: circleci/redis:latest
-          name: redis
+        name: redis
     steps:
       - checkout
       - run:
