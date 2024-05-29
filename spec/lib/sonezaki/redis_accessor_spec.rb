@@ -23,5 +23,27 @@ describe Sonezaki::RedisAccessor do
         expect(accessor.get).to be_nil
       end
     end
+
+    context "when a value has been set" do
+      let(:value) { Random.rand(1000) }
+
+      before do
+        Redis.new.set(key, value)
+      end
+
+      context "when type option is not given"do
+        it "returns the string for the value" do
+          expect(accessor.get).to eq(value.to_s)
+        end
+      end
+
+      context "when type option is integer" do
+        let(:options) { { type: :integer } }
+
+        it "returns the string for the value" do
+          expect(accessor.get).to eq(value)
+        end
+      end
+    end
   end
 end
