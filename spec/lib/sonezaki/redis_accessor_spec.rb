@@ -14,7 +14,7 @@ describe Sonezaki::RedisAccessor do
   let(:options) { {} }
 
   after do
-    Redis.new.delete(key)
+    Redis.new.del(key)
   end
 
   describe "get" do
