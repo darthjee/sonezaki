@@ -20,6 +20,7 @@ services:
     container_name: sonezaki
     depends_on: [base_build]
     command: /bin/bash -c 'rspec'
+    env_file: .env
 
   test_all:
     <<: *base
