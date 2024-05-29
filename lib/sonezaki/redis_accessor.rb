@@ -19,11 +19,12 @@ module Sonezaki
       value = connection.get(key)
       return unless value
       return value unless type
+
       convert(value)
     end
 
     private
-    
+
     def convert(value)
       case type
       when :integer
