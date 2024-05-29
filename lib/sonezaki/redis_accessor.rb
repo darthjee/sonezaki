@@ -2,7 +2,9 @@ module Sonezaki
   class RedisAccessor
     attr_reader :key, :type, :ttl
 
-    def initialize(key, type: :string, ttl: 1.month)
+    MONTH = 30 * 24 * 3600
+
+    def initialize(key, type: :string, ttl: MONTH)
       @key = key
       @type = type
       @ttl = ttl
