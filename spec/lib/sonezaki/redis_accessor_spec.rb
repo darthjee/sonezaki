@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Sonezaki do
+describe Sonezaki::RedisAccessor do
   it 'does something' do
   end
 end
