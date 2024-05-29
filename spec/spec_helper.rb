@@ -10,6 +10,7 @@ SimpleCov.start 'gem'
 
 require 'sonezaki'
 require 'pry-nav'
+require 'redis'
 
 support_files = File.expand_path('spec/support/**/*.rb')
 
