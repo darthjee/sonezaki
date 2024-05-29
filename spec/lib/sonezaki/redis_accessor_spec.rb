@@ -8,7 +8,7 @@ describe Sonezaki::RedisAccessor do
   end
 
   let(:key) do
-    SecureRandom.hex(10)
+    "SomeKey_#{Random.rand(1000)}"
   end
 
   let(:options) { {} }
