@@ -25,7 +25,7 @@ describe Sonezaki::RedisAccessor do
     end
 
     context 'when a value has been set' do
-      let(:value) { Random.rand(100_000) / 10.0 }
+      let(:value) { Random.rand(1_000_000) / 100.0 }
 
       before do
         Redis.new.set(key, value)
@@ -51,6 +51,52 @@ describe Sonezaki::RedisAccessor do
         it 'returns the float for the value' do
           expect(accessor.get).to eq(value)
         end
+      end
+    end
+  end
+
+  describe 'set' do
+    let(:value) { Random.rand(100_000) / 10.0 }
+
+    context "when type has not been defined" do
+      it "returns the stored value" do
+        expect(accessor.set(value)).to eq(value.to_s)
+      end
+
+      it "stores the value for future reading" do
+        expect { accessor.set(value) }
+          .to change { accessor.get }
+          .from(nil)
+          .to(value.to_s)
+      end
+
+      it "stores the value in redis" do
+        expect { accessor.set(value) }
+          .to change { Redis.new.get(key) }
+          .from(nil)
+          .to(value.to_s)
+      end
+    end
+
+    context "when type has been defined as integer" do
+      let(:options) { { type: :integer } }
+
+      it "returns the stored value" do
+        expect(accessor.set(value)).to eq(value.to_i)
+      end
+
+      it "stores the value for future reading" do
+        expect { accessor.set(value) }
+          .to change { accessor.get }
+          .from(nil)
+          .to(value.to_i)
+      end
+
+      it "stores the value in redis" do
+        expect { accessor.set(value) }
+          .to change { Redis.new.get(key) }
+          .from(nil)
+          .to(value.to_s)
       end
     end
   end

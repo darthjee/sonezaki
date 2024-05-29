@@ -13,6 +13,7 @@ module Sonezaki
     def set(value)
       options = { ex: ttl }.compact
       connection.set(key, value, **options)
+      get
     end
 
     def get
