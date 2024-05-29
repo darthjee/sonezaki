@@ -2,6 +2,6 @@
 
 # @api public
 # @author darthjee
-class Sonezaki
+module Sonezaki
   autoload :VERSION, 'sonezaki/version'
 end
