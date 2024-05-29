@@ -1,6 +1,6 @@
 version: '3'
 services:
-  redis:
+  sonezaki_redis:
     image: redis:6.2.4
     container_name: sonezaki_redis
 
@@ -9,6 +9,8 @@ services:
     working_dir: /home/app/app
     volumes:
       - .:/home/app/app
+    links:
+      - sonezaki_redis:redis
 
   base_build:
     <<: *base
