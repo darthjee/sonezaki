@@ -72,6 +72,7 @@ module Sonezaki
     # @return [Integer]
 
     # @private
+    # @api private
     #
     # Convert the string read from Redis
     #
@@ -91,6 +92,7 @@ module Sonezaki
     end
 
     # @private
+    # @api private
     #
     # Connection to redis
     #
@@ -100,6 +102,7 @@ module Sonezaki
     end
 
     # @private
+    # @api private
     #
     # builds the connection to redis
     #
