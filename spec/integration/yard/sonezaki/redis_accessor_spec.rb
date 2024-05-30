@@ -7,7 +7,7 @@ describe Sonezaki::RedisAccessor do
     it 'Simple usage' do
       accessor = Sonezaki::RedisAccessor.new('my_key', type: :integer)
 
-      accessor.set('10')
+      accessor.set('10.1')
 
       expect(accessor.get).to eq(10)
     end

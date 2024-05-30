@@ -5,6 +5,13 @@ module Sonezaki
   # @author darthjee
   #
   # Accessor that readis and write values into Redis
+  #
+  # @example Simple usage
+  #   accessor = Sonezaki::RedisAccessor.new('my_key', type: :integer)
+  #
+  #   accessor.set('10.1')
+  #
+  #   accessor.get # returns 10
   class RedisAccessor
     MONTH = 30 * 24 * 3600
 
