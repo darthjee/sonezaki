@@ -17,7 +17,7 @@ describe Sonezaki::RedisAccessor do
     Redis.new.del(key)
   end
 
-  describe 'get' do
+  describe '#get' do
     context 'when nothing has been set' do
       it do
         expect(accessor.get).to be_nil
@@ -55,7 +55,7 @@ describe Sonezaki::RedisAccessor do
     end
   end
 
-  describe 'set' do
+  describe '#set' do
     let(:value) { Random.rand(100_000) / 10.0 }
 
     context 'when type has not been defined' do
