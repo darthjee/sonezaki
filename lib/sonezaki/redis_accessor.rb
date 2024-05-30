@@ -31,6 +31,8 @@ module Sonezaki
     # Saving will convert the value as string
     #
     # @return [Object] the value itself as it is read from Redis
+    #
+    # @example (see RedisAccessor)
     def set(value)
       options = { ex: ttl }.compact
       connection.set(key, value, **options)
@@ -42,6 +44,8 @@ module Sonezaki
     # The value is converted using {#type}
     #
     # @return [Object]
+    #
+    # @example (see RedisAccessor)
     def get
       value = connection.get(key)
       return unless value
