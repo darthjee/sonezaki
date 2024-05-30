@@ -85,10 +85,25 @@ module Sonezaki
       value
     end
 
+    # @private
+    #
+    # Connection to redis
+    #
+    # @return [Redis]
     def connection
       @connection ||= build_connection
     end
 
+    # @private
+    #
+    # builds the connection to redis
+    #
+    # When this method is called is when redis is required.
+    #
+    # This is done so that projects can choose which accessor
+    # they want insted of use always Reds
+    #
+    # @return [Redis]
     def build_connection
       require 'redis'
 
