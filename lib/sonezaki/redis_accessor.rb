@@ -41,6 +41,7 @@ module Sonezaki
     private
 
     attr_reader :key, :type, :ttl
+
     # @method key
     # @private
     # @api private
