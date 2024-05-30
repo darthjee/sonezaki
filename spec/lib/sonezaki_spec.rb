@@ -3,6 +3,5 @@
 require 'spec_helper'
 
 describe Sonezaki do
-  it 'does something' do
-  end
+  xit 'does something'
 end
