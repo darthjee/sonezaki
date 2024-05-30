@@ -30,6 +30,11 @@ module Sonezaki
       get
     end
 
+    # Fetch the value from redis
+    #
+    # The value is converted using {#type}
+    #
+    # @return [Object]
     def get
       value = connection.get(key)
       return unless value
