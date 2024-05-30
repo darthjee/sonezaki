@@ -53,7 +53,7 @@ module Sonezaki
     #
     # Retrieve saving / reading key
     #
-    # #return [Symbol, String]
+    # @return [Symbol, String]
 
     # @method type
     # @private
