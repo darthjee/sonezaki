@@ -6,8 +6,6 @@ module Sonezaki
   #
   # Accessor that readis and write values into Redis
   class RedisAccessor
-    attr_reader :key, :type, :ttl
-
     MONTH = 30 * 24 * 3600
 
     # @param key [Symbol,String] Key used to save the data on redis
@@ -42,6 +40,40 @@ module Sonezaki
 
     private
 
+    attr_reader :key, :type, :ttl
+    # @method key
+    # @private
+    # @api private
+    #
+    # Retrieve saving / reading key
+    #
+    # #return [Symbol, String]
+
+    # @method type
+    # @private
+    # @api private
+    #
+    # Type conversion when reading data
+    #
+    # @return [Symbol]
+
+    # @method ttl
+    # @private
+    # @api private
+    #
+    # Time until the value expires in Redis
+    #
+    # @return [Integer]
+
+    # @private
+    #
+    # Convert the string read from Redis
+    #
+    # The value will be converted using {#type}
+    #
+    # @param value [String] The value read from redis
+    #
+    # @return [Object]
     def convert(value)
       case type
       when :integer
